@@ -5,9 +5,8 @@ import Link from "next/link";
 export default function Page() {
     return (
       <main>
-        <h1>Shopping List</h1>
         <StudentInfo/>
-        <Link href="app"> Home  </Link>
+        <Link href="\"> Home  </Link>
       </main>
     ); 
   }
