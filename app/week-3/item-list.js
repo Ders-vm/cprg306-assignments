@@ -49,11 +49,11 @@ export default function ItemList() {
 
     return (
         <main>
-            <ul className="Text">
+            <li className="Text">
                 {items.map((item, index) => (
                     <Item key={index} name={item.name} quantity={item.quantity} category={item.category} />
                 ))}
-            </ul>
+            </li>
         </main>
     );
 }
