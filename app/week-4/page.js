@@ -3,7 +3,7 @@ import NewItem from "./NewItem";
 export default function Page() {
     return (
       <main>
-        <h1><HomeButton/></h1>
+      <HomeButton/>
       <NewItem/>
       </main>
     );

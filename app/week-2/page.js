@@ -5,8 +5,9 @@ import HomeButton from "../Functions/home";
 export default function Page() {
     return (
       <main>
-        <StudentInfo/>
         <HomeButton/>
+        <StudentInfo/>
+        
       </main>
     ); 
   }
