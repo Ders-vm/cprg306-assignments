@@ -1,0 +1,47 @@
+Arrays 
+- Creating accessing modifying
+-Methods map, filter,sort,reduce
+
+
+// Creating arrays
+
+let arr = []
+// modifying arrays
+
+arr[0] = 5;
+arr[1] = 6;
+arr[2] = 7;
+
+//accessing arrays
+console.log(arr[0]); // 5
+
+// creating arrays with values
+
+let arr3 = [5,6,7];
+
+
+// Map function    
+// map function is used to create a new array from an existing array by applying a function to each of the elements of the existing array.
+
+const arr3 = arr.map((num) => num * 2);
+console.log(arr3); // [10, 12, 14]
+
+// Filter function
+// filter function is used to create a new array from an existing array by applying a function to each of the elements of the 
+existing array and only including the elements that pass the condition.
+
+const arr4 = arr.filter((num) => num > 5);
+console.log(arr4); // [6, 7]
+
+
+// Reduce function
+// reduce function is used to reduce the elements of an array to a single value by applying a function to each of the elements of the array.
+// accumulator is the value that is returned by the function and is the accumulated value from the previous iterations.
+
+
+// Sort function
+// sort function is used to sort the elements of an array in place and returns the sorted array. The default sort order is ascending. 
+
+const arr5 = arr.sort((a, b) => a - b);
+console.log(arr5); // [5, 6, 7]
+

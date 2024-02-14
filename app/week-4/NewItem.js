@@ -7,7 +7,6 @@ export default function NewItem() {
   const [category, setCategory] = useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     alert(`Item Added \nName: ${name} \nQuantity: ${quantity} \nCategory: ${category}`);
     
     // Reset the form fields after displaying the alert

@@ -1,4 +1,4 @@
-import HomeButton from "../Functions/home";
+import HomeButton from "../../Functions/home";
 import Counter from "./counter";
 import DogForm from "./form";
 
