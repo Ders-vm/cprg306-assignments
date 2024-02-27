@@ -1,8 +1,11 @@
-import HomeButton from '../Functions/home.js';
+import ItemList from "./item-list";
+import HomeButton from "../Functions/home";
+
 export default function Page() {
     return (
-      <main>
-        <HomeButton/>
-      </main>
+        <main>
+            <HomeButton/>
+            <ItemList/>
+        </main>
     );
-  }
+}
