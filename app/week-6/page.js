@@ -1,9 +1,10 @@
 // Page.js
-"use client"
+"use client";
 import React, { useState } from "react";
 import NewItem from "./NewItem";
 import ItemList from "./ItemList";
 import itemsData from "./items.json";
+import HomeButton from "../Components/home";
 
 export default function Page() {
   const [items, setItems] = useState(itemsData || []);
@@ -14,11 +15,16 @@ export default function Page() {
   };
 
   return (
-    <main className="flex">
-      <ItemList items={items} />
-      <div className="flex-none p-4">
-        <NewItem onAddItem={handleAddItem} />
-      </div>
-    </main>
+    <div>
+      <header>
+        <HomeButton />
+      </header>
+      <main className="flex">
+        <ItemList items={items} />
+        <div className="flex-none p-4">
+          <NewItem onAddItem={handleAddItem} />
+        </div>
+      </main>
+    </div>
   );
 }
