@@ -1,5 +1,5 @@
 import ItemList from "./item-list";
-import HomeButton from "../Functions/home";
+import HomeButton from "../Components/home";
 
 export default function Page() {
     return (

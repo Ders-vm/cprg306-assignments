@@ -1,5 +1,5 @@
 import StudentInfo from "./student-info";
-import HomeButton from "../Functions/home";
+import HomeButton from "../Components/home";
 
 
 export default function Page() {

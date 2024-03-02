@@ -1,4 +1,4 @@
-import HomeButton from "../Functions/home";
+import HomeButton from "../Components/home";
 import NewItem from "./NewItem";
 export default function Page() {
     return (
