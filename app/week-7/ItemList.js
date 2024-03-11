@@ -1,6 +1,6 @@
 // ItemList.js
 import { useState } from 'react';
-import Item from './Item';
+import Item from './item';
 
 export default function ItemList({ items, onItemClick }) {
     const [viewMode, setViewMode] = useState('list'); // 'list', 'category'
