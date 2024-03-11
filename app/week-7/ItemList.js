@@ -1,8 +1,8 @@
 // ItemList.js
 import { useState } from 'react';
-import Item from './item';
+import Item from './Item';
 
-export default function ItemList({ items }) {
+export default function ItemList({ items, onItemClick }) {
     const [viewMode, setViewMode] = useState('list'); // 'list', 'category'
 
     // Sort items alphabetically by name or category
@@ -42,13 +42,17 @@ export default function ItemList({ items }) {
                 </button>
             </div>
             {viewMode !== 'grouped' && sortedItems.map((item) => (
-                <Item key={item.id} {...item} />
+                <div key={item.id} onClick={() => onItemClick(item)}> {/* Add onClick handler */}
+                    <Item {...item} />
+                </div>
             ))}
             {viewMode === 'grouped' && Object.entries(sortedAndGroupedItems).map(([category, items]) => (
                 <div key={category}>
                     <h2 className="capitalize">{category}</h2>
                     {items.map((item) => (
-                        <Item key={item.id} {...item} />
+                        <div key={item.id} onClick={() => onItemClick(item)}> {/* Add onClick handler */}
+                            <Item {...item} />
+                        </div>
                     ))}
                 </div>
             ))}

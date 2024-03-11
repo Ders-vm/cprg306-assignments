@@ -1,6 +1,6 @@
 // Page.js
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import NewItem from "./NewItem";
 import ItemList from "./ItemList";
 import itemsData from "./items.json";
