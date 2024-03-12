@@ -1,6 +1,6 @@
 // ./app/week-7/page.js
 
-"use client"; 
+"useUserAuth"; 
 
 import { useState } from "react";
 import NewItem from "./NewItem";
@@ -11,10 +11,10 @@ import HomeButton from "../Components/home";
 
 export default function Page() {
   const [items, setItems] = useState(itemsData || []);
-  const [selectedItem, setSelectedItem] = useState(null); 
+  const [selectedItem, setSelectedItem] = useState(null); // State to store selected item
 
   const handleAddItem = (newItem) => {
-    newItem.id = Math.random().toString(36).substr(2, 9); 
+    newItem.id = Math.random().toString(36).substr(2, 9); // Generate a random id
     setItems([...items, newItem]);
   };
 
