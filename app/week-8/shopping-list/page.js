@@ -5,7 +5,6 @@ import NewItem from "./NewItem";
 import ItemList from "./ItemList";
 import MealIdeas from "./mealidea";
 import itemsData from "./items.json";
-import HomeButton from "../Components/home";
 
 export default function Page() {
   const [items, setItems] = useState(itemsData || []);
@@ -23,7 +22,6 @@ export default function Page() {
   return (
     <div>
       <header>
-        <HomeButton />
       </header>
       <main className="flex flex-col md:flex-row">
         <div className="flex-1 md:mr-4">
