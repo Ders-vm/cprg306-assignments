@@ -28,7 +28,6 @@ function Page() {
       <div>
         <HomeButton/>
         <h1>Welcome {user.displayName}</h1>
-        <img src={user.photoURL} alt={user.displayName} />
         <Link href="/week-8/shopping-list">
         <button className="bg-teal-500 hover:bg-teal-700 text-black font-bold py-2 px-4 rounded border-2 border-teal-600">
         Shopping List
