@@ -1,7 +1,6 @@
-// ./app/week-7/page.js
+// page.js
 
-"useUserAuth"; 
-
+import { useUserAuth } from "./_utils/auth-context";
 import { useState } from "react";
 import NewItem from "./NewItem";
 import ItemList from "./ItemList";
@@ -10,6 +9,7 @@ import itemsData from "./items.json";
 import HomeButton from "../Components/home";
 
 export default function Page() {
+  const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
   const [items, setItems] = useState(itemsData || []);
   const [selectedItem, setSelectedItem] = useState(null); // State to store selected item
 

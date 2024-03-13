@@ -41,6 +41,11 @@ export default function HomeButton() {
         Week 7
         </button>
       </Link>
+      <Link href="/week-8">
+        <button className="bg-teal-500 hover:bg-teal-700 text-black font-bold py-2 px-4 rounded border-2 border-teal-600">
+        Week 8
+        </button>
+      </Link>
       <Link href="/Demo">
         <button className="bg-teal-500 hover:bg-teal-700 text-black font-bold py-2 px-4 rounded border-2 border-teal-600">
         Demo
