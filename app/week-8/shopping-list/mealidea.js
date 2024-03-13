@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 
-// Helper function to remove non-ASCII characters (including emojis) from a string
 const removeNonASCII = (str) => {
     return str.replace(/[^\x00-\x7F]/g, '');
 };
@@ -11,7 +10,7 @@ export default function MealIdeas({ ingredient }) {
     // Define API Fetching Function
     const fetchMealIdeas = async (ingredient) => {
         try {
-            const cleanedIngredient = removeNonASCII(ingredient.split(',')[0].trim()); // Remove non-ASCII characters and anything after a comma
+            const cleanedIngredient = removeNonASCII(ingredient.split(',')[0].trim()); 
             const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${encodeURIComponent(cleanedIngredient)}`);
             const data = await response.json();
             return data.meals || [];
