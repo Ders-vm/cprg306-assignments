@@ -1,4 +1,3 @@
-// ItemList.js
 import { useState } from 'react';
 import Item from './item';
 
@@ -7,9 +6,9 @@ export default function ItemList({ items, onItemClick }) {
 
     // Sort items alphabetically by name or category
     const sortedItems = [...items].sort((a, b) => {
-        if (viewMode === 'name') {
+        if (viewMode === 'name' && a.name && b.name) {
             return a.name.localeCompare(b.name);
-        } else if (viewMode === 'category') {
+        } else if (viewMode === 'category' && a.category && b.category) {
             return a.category.localeCompare(b.category);
         }
         return 0;
@@ -24,7 +23,12 @@ export default function ItemList({ items, onItemClick }) {
 
     // Sort categories and their items alphabetically
     const sortedAndGroupedItems = Object.keys(groupedByCategory).sort().reduce((acc, category) => {
-        acc[category] = groupedByCategory[category].sort((a, b) => a.name.localeCompare(b.name));
+        acc[category] = groupedByCategory[category].sort((a, b) => {
+            if (a.name && b.name) {
+                return a.name.localeCompare(b.name);
+            }
+            return 0;
+        });
         return acc;
     }, {});
 
